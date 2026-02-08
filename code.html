@@ -1,0 +1,499 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Minimalist Brutalism Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#80f906",
+              "background-light": "#f7f8f5",
+              "background-dark": "#000000",
+              "off-white": "#f2f2f2",
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Space Grotesk", sans-serif;
+        cursor: crosshair;
+      }
+      .brutalist-border {
+        border: 4px solid #f2f2f2;
+      }
+      .brutalist-border-thin {
+        border: 2px solid #f2f2f2;
+      }
+      .text-huge {
+        font-size: clamp(3rem, 10vw, 8rem);
+        line-height: 0.9;
+      }
+      .hover-lime:hover {
+        color: #80f906;
+        -webkit-text-stroke: 1px #80f906;
+      }
+      .outline-text {
+        color: transparent;
+        -webkit-text-stroke: 1px #f2f2f2;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-off-white font-display"
+  >
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+      <!-- Navigation -->
+      <header
+        class="w-full border-b-[6px] border-off-white bg-background-dark sticky top-0 z-50"
+      >
+        <nav class="flex items-center justify-between px-6 py-6 md:px-12">
+          <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-primary text-4xl"
+              >terminal</span
+            >
+            <h1
+              class="text-2xl md:text-3xl font-black tracking-tighter uppercase italic"
+            >
+              PORTFOLIO.V2
+            </h1>
+          </div>
+          <div class="hidden lg:flex items-center gap-12">
+            <a
+              class="text-xl font-bold tracking-widest hover:text-primary transition-colors"
+              href="#"
+              >WORK</a
+            >
+            <a
+              class="text-xl font-bold tracking-widest hover:text-primary transition-colors"
+              href="#"
+              >TOOLBOX</a
+            >
+            <a
+              class="text-xl font-bold tracking-widest hover:text-primary transition-colors"
+              href="#"
+              >CONTACT</a
+            >
+          </div>
+          <button
+            class="bg-primary text-black px-6 py-2 text-lg font-black uppercase rounded-sm border-2 border-primary hover:bg-black hover:text-primary transition-all"
+          >
+            RESUME
+          </button>
+        </nav>
+      </header>
+      <main class="flex-1 flex flex-col">
+        <!-- Hero Section -->
+        <section
+          class="grid grid-cols-1 lg:grid-cols-12 w-full border-b-[6px] border-off-white"
+        >
+          <div
+            class="lg:col-span-7 p-6 md:p-12 flex flex-col justify-center border-b-[6px] lg:border-b-0 lg:border-r-[6px] border-off-white"
+          >
+            <span
+              class="text-primary font-bold text-xl mb-4 tracking-[0.3em] uppercase underline decoration-4 underline-offset-8"
+              >Status: Available for hire</span
+            >
+            <h2 class="text-huge font-black tracking-tighter uppercase mb-8">
+              I SOLVE <br />PROBLEMS <br /><span class="text-primary italic"
+                >WITH CODE</span
+              >
+            </h2>
+            <p
+              class="max-w-xl text-xl md:text-2xl font-medium leading-relaxed opacity-80"
+            >
+              Senior Fullstack Engineer based in Berlin. Obsessed with
+              high-performance systems, raw engineering, and minimalist
+              architecture.
+            </p>
+            <div class="mt-12 flex flex-wrap gap-4">
+              <button
+                class="bg-off-white text-black px-10 py-5 text-xl font-black uppercase hover:bg-primary transition-colors"
+              >
+                View Projects
+              </button>
+              <button
+                class="border-4 border-off-white text-off-white px-10 py-5 text-xl font-black uppercase hover:bg-off-white hover:text-black transition-colors"
+              >
+                Contact Me
+              </button>
+            </div>
+          </div>
+          <div
+            class="lg:col-span-5 relative min-h-[400px] lg:h-auto bg-neutral-900 group"
+          >
+            <div
+              class="absolute inset-0 bg-primary/20 mix-blend-multiply transition-opacity group-hover:opacity-0"
+            ></div>
+            <img
+              alt="Portrait"
+              class="w-full h-full object-cover grayscale brightness-75 contrast-125"
+              data-alt="High contrast monochrome portrait of a developer"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsJnU0n9zBHE29xDTYnEapgluVf2wc32-jp6YsB85vhffxvR2kgrA--ZhPEXzh_GT-NC7m6MK6MegW3B5gt2Vk7FA7wrhZdDKe9xcGBpteg5NP3wAz5d_Cfvp0IxPWZB9rW1I8zFPSD4wUjwb20cEp-Qak-OvBnnEYKcLCqJgqzNwDAPfmWkI8gXR4akzzXM_HSJ28h57vZO-exSbeUcXJ-Jvd3UfIRmXBkpe1q1UcrvF-_SAAB7ZGer0d9oWctjrkrtCISLqO7hM"
+            />
+            <div
+              class="absolute bottom-6 right-6 border-2 border-primary p-4 bg-black/80 backdrop-blur-sm"
+            >
+              <p
+                class="text-primary font-mono text-sm uppercase tracking-tighter"
+              >
+                01. Loc: Berlin, DE
+              </p>
+              <p
+                class="text-primary font-mono text-sm uppercase tracking-tighter"
+              >
+                02. Dev: Senior Fullstack
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Selected Work -->
+        <section class="w-full bg-background-dark">
+          <div
+            class="px-6 py-12 md:px-12 border-b-[4px] border-off-white flex justify-between items-end"
+          >
+            <h3
+              class="text-5xl md:text-7xl font-black uppercase tracking-tighter"
+            >
+              Selected_Work
+            </h3>
+            <span class="text-off-white/40 font-mono hidden md:block"
+              >[ SCROLL_DOWN ]</span
+            >
+          </div>
+          <!-- Project 01 -->
+          <div
+            class="group border-b-[4px] border-off-white hover:bg-primary/5 transition-all"
+          >
+            <a
+              class="flex flex-col md:flex-row md:items-center justify-between p-6 md:p-12 gap-8"
+              href="#"
+            >
+              <div class="flex flex-col gap-2">
+                <span class="text-primary font-mono text-lg">01 / PROJECT</span>
+                <h4
+                  class="text-4xl md:text-8xl font-black uppercase hover-lime transition-all"
+                >
+                  Financial Dashboard
+                </h4>
+              </div>
+              <div class="flex flex-col md:items-end gap-4">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-off-white text-black px-3 py-1 font-bold text-sm"
+                    >TYPESCRIPT</span
+                  >
+                  <span
+                    class="bg-off-white text-black px-3 py-1 font-bold text-sm"
+                    >RUST</span
+                  >
+                  <span
+                    class="bg-off-white text-black px-3 py-1 font-bold text-sm"
+                    >WEBSOCKETS</span
+                  >
+                </div>
+                <span
+                  class="material-symbols-outlined text-6xl group-hover:translate-x-4 transition-transform text-primary"
+                  >arrow_forward</span
+                >
+              </div>
+            </a>
+          </div>
+          <!-- Project 02 -->
+          <div
+            class="group border-b-[4px] border-off-white hover:bg-primary/5 transition-all"
+          >
+            <a
+              class="flex flex-col md:flex-row md:items-center justify-between p-6 md:p-12 gap-8"
+              href="#"
+            >
+              <div class="flex flex-col gap-2">
+                <span class="text-primary font-mono text-lg">02 / PROJECT</span>
+                <h4
+                  class="text-4xl md:text-8xl font-black uppercase hover-lime transition-all"
+                >
+                  E-Commerce Engine
+                </h4>
+              </div>
+              <div class="flex flex-col md:items-end gap-4">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-off-white text-black px-3 py-1 font-bold text-sm"
+                    >NEXT.JS</span
+                  >
+                  <span
+                    class="bg-off-white text-black px-3 py-1 font-bold text-sm"
+                    >GO</span
+                  >
+                  <span
+                    class="bg-off-white text-black px-3 py-1 font-bold text-sm"
+                    >POSTGRES</span
+                  >
+                </div>
+                <span
+                  class="material-symbols-outlined text-6xl group-hover:translate-x-4 transition-transform text-primary"
+                  >arrow_forward</span
+                >
+              </div>
+            </a>
+          </div>
+          <!-- Project 03 -->
+          <div
+            class="group border-b-[6px] border-off-white hover:bg-primary/5 transition-all"
+          >
+            <a
+              class="flex flex-col md:flex-row md:items-center justify-between p-6 md:p-12 gap-8"
+              href="#"
+            >
+              <div class="flex flex-col gap-2">
+                <span class="text-primary font-mono text-lg">03 / PROJECT</span>
+                <h4
+                  class="text-4xl md:text-8xl font-black uppercase hover-lime transition-all"
+                >
+                  Neural Interface
+                </h4>
+              </div>
+              <div class="flex flex-col md:items-end gap-4">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-off-white text-black px-3 py-1 font-bold text-sm"
+                    >PYTHON</span
+                  >
+                  <span
+                    class="bg-off-white text-black px-3 py-1 font-bold text-sm"
+                    >C++</span
+                  >
+                  <span
+                    class="bg-off-white text-black px-3 py-1 font-bold text-sm"
+                    >CUDA</span
+                  >
+                </div>
+                <span
+                  class="material-symbols-outlined text-6xl group-hover:translate-x-4 transition-transform text-primary"
+                  >arrow_forward</span
+                >
+              </div>
+            </a>
+          </div>
+        </section>
+        <!-- Toolbox Table -->
+        <section class="w-full bg-background-dark px-6 py-20 md:px-12">
+          <div class="mb-12">
+            <h3
+              class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-4"
+            >
+              The_Toolbox
+            </h3>
+            <div class="w-32 h-4 bg-primary"></div>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t-[4px] border-l-[4px] border-off-white"
+          >
+            <!-- Languages -->
+            <div class="border-r-[4px] border-b-[4px] border-off-white p-8">
+              <h5
+                class="text-primary font-black text-2xl uppercase mb-6 flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined">terminal</span>
+                Languages
+              </h5>
+              <ul
+                class="flex flex-col gap-4 text-xl font-bold uppercase tracking-widest"
+              >
+                <li class="flex items-center gap-3">
+                  <div class="size-3 bg-primary"></div>
+                  TypeScript
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="size-3 bg-primary"></div>
+                  Rust
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="size-3 bg-primary"></div>
+                  Golang
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="size-3 bg-primary"></div>
+                  Python
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="size-3 bg-primary"></div>
+                  C++
+                </li>
+              </ul>
+            </div>
+            <!-- Frameworks -->
+            <div class="border-r-[4px] border-b-[4px] border-off-white p-8">
+              <h5
+                class="text-primary font-black text-2xl uppercase mb-6 flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined">layers</span>
+                Frameworks
+              </h5>
+              <ul
+                class="flex flex-col gap-4 text-xl font-bold uppercase tracking-widest"
+              >
+                <li class="flex items-center gap-3">
+                  <div class="size-3 bg-primary"></div>
+                  Next.js
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="size-3 bg-primary"></div>
+                  React
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="size-3 bg-primary"></div>
+                  Actix-Web
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="size-3 bg-primary"></div>
+                  Gin
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="size-3 bg-primary"></div>
+                  Tailwind
+                </li>
+              </ul>
+            </div>
+            <!-- Infrastructure -->
+            <div class="border-r-[4px] border-b-[4px] border-off-white p-8">
+              <h5
+                class="text-primary font-black text-2xl uppercase mb-6 flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined">storage</span>
+                Infra
+              </h5>
+              <ul
+                class="flex flex-col gap-4 text-xl font-bold uppercase tracking-widest"
+              >
+                <li class="flex items-center gap-3">
+                  <div class="size-3 bg-primary"></div>
+                  AWS / GCP
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="size-3 bg-primary"></div>
+                  Docker
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="size-3 bg-primary"></div>
+                  Kubernetes
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="size-3 bg-primary"></div>
+                  Terraform
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="size-3 bg-primary"></div>
+                  PostgreSQL
+                </li>
+              </ul>
+            </div>
+            <!-- Tools -->
+            <div class="border-r-[4px] border-b-[4px] border-off-white p-8">
+              <h5
+                class="text-primary font-black text-2xl uppercase mb-6 flex items-center gap-2"
+              >
+                <span class="material-symbols-outlined">build</span>
+                Tools
+              </h5>
+              <ul
+                class="flex flex-col gap-4 text-xl font-bold uppercase tracking-widest"
+              >
+                <li class="flex items-center gap-3">
+                  <div class="size-3 bg-primary"></div>
+                  Neovim
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="size-3 bg-primary"></div>
+                  Git / CLI
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="size-3 bg-primary"></div>
+                  CI / CD
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="size-3 bg-primary"></div>
+                  Linux
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="size-3 bg-primary"></div>
+                  Wireshark
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- Footer / CTA -->
+        <footer class="w-full bg-off-white text-black p-6 md:p-12">
+          <div
+            class="flex flex-col md:flex-row justify-between items-start md:items-end gap-12"
+          >
+            <div class="flex flex-col gap-4">
+              <h2
+                class="text-huge font-black uppercase tracking-tighter leading-none"
+              >
+                LET'S<br />BUILD.
+              </h2>
+              <div
+                class="flex gap-8 mt-4 font-black text-2xl underline decoration-4 underline-offset-8"
+              >
+                <a class="hover:text-primary transition-colors" href="#"
+                  >GITHUB</a
+                >
+                <a class="hover:text-primary transition-colors" href="#"
+                  >LINKEDIN</a
+                >
+                <a class="hover:text-primary transition-colors" href="#"
+                  >TWITTER</a
+                >
+              </div>
+            </div>
+            <div class="flex flex-col items-end gap-8 w-full md:w-auto">
+              <div
+                class="p-8 border-4 border-black w-full text-center hover:bg-primary transition-all cursor-pointer"
+              >
+                <span
+                  class="text-3xl md:text-5xl font-black uppercase tracking-tighter"
+                  >SAY_HELLO@DEV.IO</span
+                >
+              </div>
+              <p
+                class="font-bold text-lg uppercase tracking-[0.2em] opacity-60"
+              >
+                © 2024 DESIGNED_FOR_PERFORMANCE
+              </p>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

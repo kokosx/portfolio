@@ -1,26 +1,30 @@
+@config "../../tailwind.config.js";
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Space Grotesk", sans-serif;
+  cursor: crosshair;
+}
+
+.brutalist-border {
+  border: 4px solid #f2f2f2;
+}
+.brutalist-border-thin {
+  border: 2px solid #f2f2f2;
+}
+.text-huge {
+  font-size: clamp(3rem, 10vw, 8rem);
+  line-height: 0.9;
+}
+.hover-lime:hover {
+  color: #80f906;
+  -webkit-text-stroke: 1px #80f906;
+}
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 1px #f2f2f2;
 }
