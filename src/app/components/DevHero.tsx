@@ -35,6 +35,7 @@ const DevHero = () => {
       <div className="lg:col-span-5 relative min-h-[400px] lg:h-auto bg-neutral-900 group">
         <div className="absolute inset-0 bg-primary/20 mix-blend-multiply transition-opacity group-hover:opacity-0"></div>
         <Image
+          loading="eager"
           alt="Portrait"
           className="w-full h-full object-cover grayscale brightness-75 contrast-125"
           data-alt="High contrast monochrome portrait of a developer"
