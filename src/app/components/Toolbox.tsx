@@ -1,3 +1,6 @@
+import { AtomIcon, Database, TerminalSquareIcon, Text } from "lucide-react";
+import { type ReactElement } from "react";
+
 const Toolbox = () => {
   return (
     <section
@@ -22,7 +25,7 @@ const Toolbox = () => {
 export default Toolbox;
 
 type ToolboxSectionProps = {
-  icon: string;
+  icon: ReactElement;
   title: string;
   items: string[];
 };
@@ -58,23 +61,23 @@ const ToolboxItem = ({ label }: ToolboxItemProps) => {
 
 const toolboxSections: ToolboxSectionProps[] = [
   {
-    icon: "terminal",
+    icon: <TerminalSquareIcon />,
     title: "Languages",
-    items: ["TypeScript", "Rust", "Golang", "Python", "C++"],
+    items: ["TypeScript", "PHP", "JSX", "Python", "SQL"],
   },
   {
-    icon: "layers",
+    icon: <AtomIcon />,
     title: "Frameworks",
-    items: ["Next.js", "React", "Actix-Web", "Gin", "Tailwind"],
+    items: ["NEXT.JS", "REACT", "ASTRO", "LARAVEL", "DJANGO"],
   },
   {
-    icon: "storage",
+    icon: <Database />,
     title: "Infra",
-    items: ["AWS / GCP", "Docker", "Kubernetes", "Terraform", "PostgreSQL"],
+    items: ["POSTGRESQL", "GITHUB", "MYSQL", "VERCEL", "PostgreSQL"],
   },
   {
-    icon: "build",
+    icon: <Text />,
     title: "Tools",
-    items: ["Neovim", "Git / CLI", "CI / CD", "Linux", "Wireshark"],
+    items: ["VSCODE", "Git", "TERMINAL", "Linux", "DOCKER"],
   },
 ];

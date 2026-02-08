@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const DevHero = () => {
   return (
@@ -13,14 +14,16 @@ const DevHero = () => {
           <span className="text-primary italic">WITH CODE</span>
         </h2>
         <p className="max-w-xl text-xl md:text-2xl font-medium leading-relaxed opacity-80">
-          Senior Fullstack Engineer based in Berlin. Obsessed with
-          high-performance systems, raw engineering, and minimalist
-          architecture.
+          Fullstack developer building efficient, well-structured web
+          applications from idea to production.
         </p>
         <div className="mt-12 flex flex-wrap gap-4">
-          <button className="bg-off-white text-black px-10 py-5 text-xl font-black uppercase hover:bg-primary transition-colors">
+          <Link
+            href="#work"
+            className="bg-off-white text-black px-10 py-5 text-xl font-black uppercase hover:bg-primary transition-colors"
+          >
             View Projects
-          </button>
+          </Link>
           <button className="border-4 border-off-white text-off-white px-10 py-5 text-xl font-black uppercase hover:bg-off-white hover:text-black transition-colors">
             Contact Me
           </button>
