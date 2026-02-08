@@ -11,7 +11,7 @@ const Footer = () => {
           className="flex flex-col items-end gap-8 w-full md:w-auto"
         >
           <div className="p-8 border-4 border-black w-full text-center hover:bg-primary transition-all cursor-pointer">
-            <span className="text-3xl md:text-5xl font-black uppercase tracking-tighter">
+            <span className="text-xl md:text-5xl font-black uppercase tracking-tighter">
               <Link href="mailto:bartosz.kks5@gmail.com">
                 BARTOSZ.KKS5@GMAIL.COM
               </Link>

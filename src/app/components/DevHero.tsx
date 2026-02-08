@@ -24,9 +24,12 @@ const DevHero = () => {
           >
             View Projects
           </Link>
-          <button className="border-4 border-off-white text-off-white px-10 py-5 text-xl font-black uppercase hover:bg-off-white hover:text-black transition-colors">
+          <Link
+            href="#contact"
+            className="border-4 border-off-white text-off-white px-10 py-5 text-xl font-black uppercase hover:bg-off-white hover:text-black transition-colors"
+          >
             Contact Me
-          </button>
+          </Link>
         </div>
       </div>
       <div className="lg:col-span-5 relative min-h-[400px] lg:h-auto bg-neutral-900 group">
@@ -36,7 +39,7 @@ const DevHero = () => {
           className="w-full h-full object-cover grayscale brightness-75 contrast-125"
           data-alt="High contrast monochrome portrait of a developer"
           fill
-          src="/image_dev.png"
+          src="/image_dev.webp"
         />
         <div className="absolute bottom-6 right-6 border-2 border-primary p-4 bg-black/80 backdrop-blur-sm">
           <p className="text-primary font-mono text-sm uppercase tracking-tighter">
