@@ -1,10 +1,31 @@
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const ProjectShowcase = () => {
+  const t = useTranslations("ProjectShowcase");
+
+  const projectItems = [
+    {
+      href: "#",
+      text: t("p1_title"),
+      tags: ["TYPESCRIPT", "RUST", "WEBSOCKETS"],
+    },
+    {
+      href: "#",
+      text: t("p2_title"),
+      tags: ["PYTHON", "C++", "CUDA"],
+    },
+    {
+      href: "#",
+      text: t("p3_title"),
+      tags: ["NEXT.JS", "GO", "POSTGRES"],
+    },
+  ];
+
   return (
     <section id="work" className="w-full bg-background-dark">
       {projectItems.map((project, i) => (
-        <ProjectElement key={i} {...project} order={i + 1} />
+        <ProjectElement key={i} {...project} order={i + 1} projectLabel={t("project_label")} />
       ))}
     </section>
   );
@@ -12,32 +33,15 @@ const ProjectShowcase = () => {
 
 export default ProjectShowcase;
 
-const projectItems = [
-  {
-    href: "#",
-    text: "Financial Dashboard",
-    tags: ["TYPESCRIPT", "RUST", "WEBSOCKETS"],
-  },
-  {
-    href: "#",
-    text: "Neural Interface",
-    tags: ["PYTHON", "C++", "CUDA"],
-  },
-  {
-    href: "#",
-    text: "E-COMMERCE ENGINE",
-    tags: ["NEXT.JS", "GO", "POSTGRES"],
-  },
-];
-
 type ProjectProps = {
   href: string;
   text: string;
   tags: string[];
   order: number;
+  projectLabel: string;
 };
 
-const ProjectElement = ({ href, tags, text, order }: ProjectProps) => {
+const ProjectElement = ({ href, tags, text, order, projectLabel }: ProjectProps) => {
   return (
     <div className="group border-b-[4px] border-off-white hover:bg-primary/5 transition-all">
       <a
@@ -46,7 +50,7 @@ const ProjectElement = ({ href, tags, text, order }: ProjectProps) => {
       >
         <div className="flex flex-col gap-2">
           <span className="text-primary font-mono text-lg">
-            0{order} / PROJECT
+            0{order} / {projectLabel}
           </span>
           <h4 className="text-4xl md:text-8xl font-black uppercase hover-lime transition-all">
             {text}

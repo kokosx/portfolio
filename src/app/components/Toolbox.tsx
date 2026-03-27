@@ -1,7 +1,33 @@
 import { AtomIcon, Database, TerminalSquareIcon, Text } from "lucide-react";
 import { type ReactElement } from "react";
+import { useTranslations } from "next-intl";
 
 const Toolbox = () => {
+  const t = useTranslations("Toolbox");
+
+  const toolboxSections: ToolboxSectionProps[] = [
+    {
+      icon: <TerminalSquareIcon />,
+      title: t("languages"),
+      items: ["TypeScript", "PHP", "JSX", "Python", "SQL"],
+    },
+    {
+      icon: <AtomIcon />,
+      title: t("frameworks"),
+      items: ["NEXT.JS", "REACT", "ASTRO", "LARAVEL", "DJANGO"],
+    },
+    {
+      icon: <Database />,
+      title: t("infra"),
+      items: ["POSTGRESQL", "GITHUB", "MYSQL", "VERCEL", "PostgreSQL"],
+    },
+    {
+      icon: <Text />,
+      title: t("tools"),
+      items: ["VSCODE", "Git", "TERMINAL", "Linux", "DOCKER"],
+    },
+  ];
+
   return (
     <section
       id="toolbox"
@@ -9,7 +35,7 @@ const Toolbox = () => {
     >
       <div className="mb-12">
         <h3 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-4">
-          The_Toolbox
+          {t("heading")}
         </h3>
         <div className="w-32 h-4 bg-primary"></div>
       </div>
@@ -58,26 +84,3 @@ const ToolboxItem = ({ label }: ToolboxItemProps) => {
     </li>
   );
 };
-
-const toolboxSections: ToolboxSectionProps[] = [
-  {
-    icon: <TerminalSquareIcon />,
-    title: "Languages",
-    items: ["TypeScript", "PHP", "JSX", "Python", "SQL"],
-  },
-  {
-    icon: <AtomIcon />,
-    title: "Frameworks",
-    items: ["NEXT.JS", "REACT", "ASTRO", "LARAVEL", "DJANGO"],
-  },
-  {
-    icon: <Database />,
-    title: "Infra",
-    items: ["POSTGRESQL", "GITHUB", "MYSQL", "VERCEL", "PostgreSQL"],
-  },
-  {
-    icon: <Text />,
-    title: "Tools",
-    items: ["VSCODE", "Git", "TERMINAL", "Linux", "DOCKER"],
-  },
-];

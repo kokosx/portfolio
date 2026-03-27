@@ -1,7 +1,9 @@
 import Link from "next/link";
 import LetsBuild from "./LetsBuild";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+  const t = useTranslations("Footer");
   return (
     <footer className="w-full bg-off-white text-black p-6 md:p-12">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
@@ -18,7 +20,7 @@ const Footer = () => {
             </span>
           </div>
           <p className="font-bold text-lg uppercase tracking-[0.2em] opacity-60">
-            © 2026 DESIGNED_FOR_PERFORMANCE
+            {t("text")}
           </p>
         </div>
       </div>

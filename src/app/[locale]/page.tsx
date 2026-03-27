@@ -1,9 +1,9 @@
 import React from "react";
-import Header from "./components/Header";
-import DevHero from "./components/DevHero";
-import ProjectShowcase from "./components/ProjectShowcase";
-import Toolbox from "./components/Toolbox";
-import Footer from "./components/Footer";
+import Header from "../components/Header";
+import DevHero from "../components/DevHero";
+import ProjectShowcase from "../components/ProjectShowcase";
+import Toolbox from "../components/Toolbox";
+import Footer from "../components/Footer";
 
 const page = () => {
   return (

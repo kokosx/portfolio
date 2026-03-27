@@ -1,0 +1,39 @@
+{
+  "Header": {
+    "work": "PROJEKTY",
+    "toolbox": "NARZĘDZIA",
+    "contact": "KONTAKT",
+    "resume": "CV"
+  },
+  "DevHero": {
+    "status": "Status: Otwarty na zlecenia",
+    "heading_1": "ROZWIĄZUJĘ",
+    "heading_2": "PROBLEMY",
+    "heading_3": "KODEM",
+    "description": "Fullstack developer tworzący wydajne, przemyślane aplikacje webowe od pierwszego pomysłu aż po wdrożenie.",
+    "btn_projects": "Zobacz Projekty",
+    "btn_contact": "Napisz do mnie",
+    "loc": "01. LOK: Bydgoszcz (mniej więcej), PL",
+    "role": "02. DEV: Junior Fullstack"
+  },
+  "ProjectShowcase": {
+    "project_label": "PROJEKT",
+    "p1_title": "Finansowy Dashboard",
+    "p2_title": "Interfejs Neuronalny",
+    "p3_title": "SILNIK E-COMMERCE"
+  },
+  "Toolbox": {
+    "heading": "Przybornik",
+    "languages": "Języki",
+    "frameworks": "Frameworki",
+    "infra": "Infrastruktura",
+    "tools": "Narzędzia"
+  },
+  "Footer": {
+    "text": "B.KOKOSZEWSKI © 2026. WSZELKIE PRAWA ZASTRZEŻONE."
+  },
+  "LetsBuild": {
+    "line1": "STWÓRZMY",
+    "line2": "COŚ."
+  }
+}

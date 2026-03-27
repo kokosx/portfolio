@@ -1,0 +1,39 @@
+{
+  "Header": {
+    "work": "WORK",
+    "toolbox": "TOOLBOX",
+    "contact": "CONTACT",
+    "resume": "RESUME"
+  },
+  "DevHero": {
+    "status": "Status: Available for hire",
+    "heading_1": "I SOLVE",
+    "heading_2": "PROBLEMS",
+    "heading_3": "WITH CODE",
+    "description": "Fullstack developer building efficient, well-structured web applications from idea to production.",
+    "btn_projects": "View Projects",
+    "btn_contact": "Contact Me",
+    "loc": "01. Loc: Bydgoszcz (approximately), PL",
+    "role": "02. Dev: Junior Fullstack"
+  },
+  "ProjectShowcase": {
+    "project_label": "PROJECT",
+    "p1_title": "Financial Dashboard",
+    "p2_title": "Neural Interface",
+    "p3_title": "E-COMMERCE ENGINE"
+  },
+  "Toolbox": {
+    "heading": "The_Toolbox",
+    "languages": "Languages",
+    "frameworks": "Frameworks",
+    "infra": "Infra",
+    "tools": "Tools"
+  },
+  "Footer": {
+    "text": "B.KOKOSZEWSKI © 2026. ALL RIGHTS RESERVED."
+  },
+  "LetsBuild": {
+    "line1": "LET'S",
+    "line2": "BUILD."
+  }
+}

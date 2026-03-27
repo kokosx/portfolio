@@ -1,12 +1,14 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const LetsBuild = () => {
+  const t = useTranslations("LetsBuild");
   return (
     <div className="flex flex-col gap-4">
       <h2 className="text-huge font-black uppercase tracking-tighter leading-none">
-        LET&apos;S
+        {t("line1")}
         <br />
-        BUILD.
+        {t("line2")}
       </h2>
       <div className="flex gap-8 mt-4 font-black text-2xl underline decoration-4 underline-offset-8">
         {contactItems.map((item) => (
