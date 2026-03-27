@@ -1,27 +1,25 @@
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import { localizedPath } from "@/lib/seo";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
   const t = useTranslations("Header");
-  const locale = useLocale();
 
   const headerItems = [
     {
-      href: localizedPath(locale, "/blog"),
+      href: "/blog",
       text: t("blog"),
     },
     {
-      href: localizedPath(locale, "/#work"),
+      href: "/#work",
       text: t("work"),
     },
     {
-      href: localizedPath(locale, "/#toolbox"),
+      href: "/#toolbox",
       text: t("toolbox"),
     },
     {
-      href: localizedPath(locale, "/#contact"),
+      href: "/#contact",
       text: t("contact"),
     },
   ];
@@ -31,7 +29,7 @@ const Header = () => {
       <nav className="flex items-center justify-between px-6 py-6 md:px-12">
         <div className="flex items-center gap-4">
           <Link
-            href={localizedPath(locale, "/")}
+            href="/"
             className="text-2xl md:text-3xl font-black tracking-tighter uppercase italic transition-colors hover:text-primary"
           >
             B.KOKOSZEWSKI
