@@ -1,0 +1,93 @@
+---
+title: "Scalable Next.js SEO in 2026: A Practical Architecture"
+description: "A production-ready blueprint for structured data, Open Graph coverage, metadata architecture, and multilingual SEO in Next.js using MDX content."
+date: "2026-03-27"
+updatedAt: "2026-03-27"
+author: "Bartosz Kokoszewski"
+category: "Technical SEO"
+tags:
+  - "Next.js"
+  - "SEO"
+  - "Schema.org"
+  - "Open Graph"
+  - "MDX"
+keywords:
+  - "next.js seo"
+  - "structured data"
+  - "blogposting schema"
+  - "faq schema"
+  - "open graph implementation"
+  - "multilingual seo"
+coverImage: "/image_dev.webp"
+canonicalPath: "/blog/scalable-nextjs-seo"
+faqs:
+  - question: "Why combine MDX with structured data in one workflow?"
+    answer: "Because it keeps editorial content and machine-readable metadata synchronized, which reduces SEO drift and minimizes release mistakes in multilingual sites."
+  - question: "Which schema types matter the most for technical blog posts?"
+    answer: "Start with BlogPosting, BreadcrumbList, WebPage, and FAQPage when relevant. These cover article context, site hierarchy, page semantics, and rich-answer eligibility."
+  - question: "How often should metadata be updated after publication?"
+    answer: "Update metadata whenever title intent, target keywords, publication context, or major content sections change. Also refresh modified dates to reflect meaningful edits."
+---
+
+## The Problem Most Teams Ignore
+
+Many developer blogs ship great content and still underperform in search because metadata, Open Graph, and structured data are treated as optional polish instead of core architecture.
+
+If your post has no explicit content model, every page becomes a one-off implementation. That leads to inconsistent titles, missing descriptions, weak social previews, and schema gaps.
+
+## A Better Model: Content + Metadata Contract
+
+Define a frontmatter contract for each MDX post:
+
+- Human-facing fields: `title`, `description`, `date`, `author`
+- Discovery fields: `tags`, `keywords`, `category`
+- Social fields: `coverImage`, canonical path
+- Rich-result fields: FAQ items with explicit question/answer pairs
+
+Once this contract exists, pages can generate consistent metadata and JSON-LD automatically.
+
+## Open Graph Is Not Optional
+
+Open Graph shapes how your content appears in Slack, X, LinkedIn, and messaging apps. A weak card hurts click-through rate even if your ranking is solid.
+
+For each article, always include:
+
+1. `og:title` aligned with search intent
+2. `og:description` aligned with your meta description
+3. `og:image` at social-safe dimensions
+4. `og:type=article`
+5. publish and modified timestamps where supported
+
+## Schema Stack That Scales
+
+For technical articles, a robust baseline is:
+
+- `BlogPosting` for core article semantics
+- `BreadcrumbList` for crawl hierarchy clarity
+- `WebPage` for page-level semantics and relationships
+- `FAQPage` only when genuine FAQ content exists on-page
+
+This stack supports rich snippets, better context for crawlers, and more resilient indexing behavior across updates.
+
+## Multilingual SEO Done Right
+
+If you publish in English and Polish, treat both as first-class pages:
+
+- Localized URLs
+- Localized metadata and Open Graph text
+- Locale-aware schema values
+- Correct `alternates.languages`
+
+This avoids duplicate-content confusion and helps each language rank for native query patterns.
+
+## Practical Editorial Rule
+
+Before publishing, verify this checklist:
+
+- Title maps to a clear query intent
+- Description explains value, not fluff
+- H1 exactly reflects the page topic
+- Schema validates and matches visible content
+- FAQ answers are real, concise, and helpful
+
+That is the difference between “content that exists” and “content that compounds.”

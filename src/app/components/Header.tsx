@@ -7,6 +7,10 @@ const Header = () => {
 
   const headerItems = [
     {
+      href: "/blog",
+      text: t("blog"),
+    },
+    {
       href: "#work",
       text: t("work"),
     },

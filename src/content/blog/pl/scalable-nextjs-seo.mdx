@@ -1,0 +1,93 @@
+---
+title: "Skalowalne SEO w Next.js (2026): Praktyczna architektura"
+description: "Gotowy do produkcji schemat na structured data, Open Graph, metadata architecture i wielojęzyjne SEO w Next.js z treścią MDX."
+date: "2026-03-27"
+updatedAt: "2026-03-27"
+author: "Bartosz Kokoszewski"
+category: "SEO techniczne"
+tags:
+  - "Next.js"
+  - "SEO"
+  - "Schema.org"
+  - "Open Graph"
+  - "MDX"
+keywords:
+  - "next.js seo"
+  - "dane strukturalne"
+  - "blogposting schema"
+  - "faq schema"
+  - "open graph"
+  - "seo wielojęzyczne"
+coverImage: "/image_dev.webp"
+canonicalPath: "/pl/blog/scalable-nextjs-seo"
+faqs:
+  - question: "Dlaczego warto łączyć MDX i structured data w jednym workflow?"
+    answer: "Bo treść redakcyjna i metadane techniczne pozostają zsynchronizowane, co zmniejsza ryzyko błędów SEO i usprawnia publikację w wielu językach."
+  - question: "Jakie typy schema są najważniejsze dla wpisów technicznych?"
+    answer: "Najczęściej: BlogPosting, BreadcrumbList, WebPage oraz FAQPage, o ile sekcja FAQ realnie występuje w treści strony."
+  - question: "Kiedy aktualizować metadane po publikacji?"
+    answer: "Za każdym razem, gdy zmienia się intencja tytułu, zakres słów kluczowych, kontekst biznesowy wpisu lub główne sekcje treści."
+---
+
+## Problem, który zespoły często pomijają
+
+Wiele blogów developerskich publikuje świetne treści, ale przegrywa w wyszukiwarce, ponieważ metadata, Open Graph i schema traktowane są jako dodatek zamiast fundamentu.
+
+Bez spójnego modelu danych każda podstrona jest implementowana inaczej. Efekt: niespójne tytuły, brak opisów, słabe podglądy społecznościowe i luki w danych strukturalnych.
+
+## Lepszy model: kontrakt treści i metadanych
+
+Każdy wpis MDX powinien mieć jasny kontrakt frontmatter:
+
+- Pola widoczne dla użytkownika: `title`, `description`, `date`, `author`
+- Pola odkrywalności: `tags`, `keywords`, `category`
+- Pola społecznościowe: `coverImage`, canonical path
+- Pola rich results: FAQ jako jawne pary pytanie/odpowiedź
+
+Dzięki temu layout może automatycznie generować spójne metadata i JSON-LD dla każdego artykułu.
+
+## Open Graph to warstwa obowiązkowa
+
+Open Graph decyduje o tym, jak wpis wygląda w Slacku, na LinkedIn czy w komunikatorach. Słaba karta obniża CTR, nawet przy dobrym rankingu.
+
+Dla każdego wpisu ustaw:
+
+1. `og:title` dopasowany do intencji użytkownika
+2. `og:description` zgodny z meta description
+3. `og:image` w odpowiednich proporcjach
+4. `og:type=article`
+5. daty publikacji i aktualizacji
+
+## Zestaw schema, który skaluje się w praktyce
+
+Dla artykułów technicznych sprawdza się następujący baseline:
+
+- `BlogPosting` dla semantyki artykułu
+- `BreadcrumbList` dla hierarchii nawigacji
+- `WebPage` dla kontekstu strony
+- `FAQPage` tylko wtedy, gdy FAQ realnie istnieje na stronie
+
+To zwiększa czytelność dla crawlerów i stabilizuje widoczność po aktualizacjach treści.
+
+## SEO wielojęzyczne bez chaosu
+
+Jeśli publikujesz po polsku i angielsku, obie wersje traktuj równorzędnie:
+
+- Lokalne URL-e
+- Lokalne metadata i treść OG
+- Locale-aware wartości w schema
+- Poprawne `alternates.languages`
+
+To ogranicza problemy z duplikacją i pomaga rankować na zapytaniach lokalnych.
+
+## Reguła redakcyjna przed publikacją
+
+Przed publikacją sprawdź:
+
+- Czy tytuł odpowiada konkretnej intencji wyszukiwania
+- Czy opis mówi o wartości, a nie o ogólnikach
+- Czy H1 jednoznacznie definiuje temat strony
+- Czy schema waliduje się i pokrywa z widoczną treścią
+- Czy FAQ zawiera realne, pomocne odpowiedzi
+
+To różnica między "wpisem, który istnieje" a "wpisem, który stale dowozi ruch".
