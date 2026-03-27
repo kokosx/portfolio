@@ -1,25 +1,27 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import { localizedPath } from "@/lib/seo";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
   const t = useTranslations("Header");
+  const locale = useLocale();
 
   const headerItems = [
     {
-      href: "/blog",
+      href: localizedPath(locale, "/blog"),
       text: t("blog"),
     },
     {
-      href: "#work",
+      href: localizedPath(locale, "/#work"),
       text: t("work"),
     },
     {
-      href: "#toolbox",
+      href: localizedPath(locale, "/#toolbox"),
       text: t("toolbox"),
     },
     {
-      href: "#contact",
+      href: localizedPath(locale, "/#contact"),
       text: t("contact"),
     },
   ];
@@ -28,9 +30,12 @@ const Header = () => {
     <header className="w-full border-b-[6px] border-off-white bg-background-dark sticky top-0 z-50">
       <nav className="flex items-center justify-between px-6 py-6 md:px-12">
         <div className="flex items-center gap-4">
-          <h1 className="text-2xl md:text-3xl font-black tracking-tighter uppercase italic">
+          <Link
+            href={localizedPath(locale, "/")}
+            className="text-2xl md:text-3xl font-black tracking-tighter uppercase italic transition-colors hover:text-primary"
+          >
             B.KOKOSZEWSKI
-          </h1>
+          </Link>
         </div>
         <div className="hidden lg:flex items-center gap-12">
           {headerItems.map((item) => (
